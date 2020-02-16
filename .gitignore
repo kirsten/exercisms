@@ -20,3 +20,6 @@ scala/**/project/
 scala/**/target/
 scala/**/build/
 scala/**/src/main/scala/.keep
+
+haskell/**/.stack-work
+haskell/**/*.cabal
