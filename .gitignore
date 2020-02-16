@@ -10,7 +10,13 @@ tmp
 __pycache__
 .venv
 
-javascript/**/node_modules
-javascript/**/npm-debug.log
-javascript/**/yarn.lock
-javascript/**/yarn-error.log
+**/**/node_modules
+**/**/npm-debug.log
+**/**/yarn.lock
+**/**/yarn-error.log
+
+scala/**/bin/
+scala/**/project/
+scala/**/target/
+scala/**/build/
+scala/**/src/main/scala/.keep
