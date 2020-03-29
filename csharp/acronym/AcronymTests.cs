@@ -28,13 +28,13 @@ public class AcronymTests
         Assert.Equal("GIMP", Acronym.Abbreviate("GNU Image Manipulation Program"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Punctuation_without_whitespace()
     {
         Assert.Equal("CMOS", Acronym.Abbreviate("Complementary metal-oxide semiconductor"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Very_long_abbreviation()
     {
         Assert.Equal("ROTFLSHTMDCOALM", Acronym.Abbreviate("Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me"));

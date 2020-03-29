@@ -5,7 +5,8 @@ public static class Acronym
 {
     public static string Abbreviate(string phrase)
     {
-        string[] words = phrase.Split(" ");
+        char[] delimiters = { ' ', '-' };
+        string[] words = phrase.Split(delimiters);
         string[] firstLetters = words.Select((word) => word.Substring(0, 1)).ToArray();
         string acronym = String.Join("", firstLetters).ToUpper();
 
