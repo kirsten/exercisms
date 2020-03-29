@@ -40,13 +40,13 @@ public class AcronymTests
         Assert.Equal("ROTFLSHTMDCOALM", Acronym.Abbreviate("Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Consecutive_delimiters()
     {
         Assert.Equal("SIMUFTA", Acronym.Abbreviate("Something - I made up from thin air"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Apostrophes()
     {
         Assert.Equal("HC", Acronym.Abbreviate("Halley's Comet"));
