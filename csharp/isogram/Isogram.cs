@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 public static class Isogram
 {
     public static bool IsIsogram(string word)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        string letters = Regex.Replace(word.ToLower(), @"[^a-z]+", String.Empty);
+        return letters.Distinct().Count() == letters.Length;
     }
 }
