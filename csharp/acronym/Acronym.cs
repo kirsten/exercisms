@@ -3,19 +3,20 @@ using System.Linq;
 
 public static class Acronym
 {
+    private static char[] Delimiters = { ' ', '-', '_'  };
     public static string Abbreviate(string phrase)
     {
-        char[] delimiters = { ' ', '-', '_'  };
-        string[] words = phrase.Split(delimiters);
+        string[] words = phrase.Split(Delimiters);
+        string[] firstLetters = FirstLetters(words);
+        return String.Join("", firstLetters).ToUpper();
+    }
 
-        string[] firstLetters = words.Select((word) => {
+    private static string[] FirstLetters(string[] words)
+    {
+        return words.Select((word) => {
             if (word.Length == 0) return "";
 
             return word.Substring(0, 1);
         }).ToArray();
-
-        string acronym = String.Join("", firstLetters).ToUpper();
-
-        return acronym;
     }
 }
