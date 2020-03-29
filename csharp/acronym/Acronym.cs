@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Linq;
 
 public static class Acronym
 {
     public static string Abbreviate(string phrase)
     {
-        return "PNG";
+        string[] words = phrase.Split(" ");
+        string[] firstLetters = words.Select((word) => word.Substring(0, 1)).ToArray();
+        string acronym = String.Join("", firstLetters);
+
+        return acronym;
     }
 }
