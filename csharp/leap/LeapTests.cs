@@ -28,13 +28,13 @@ public class LeapTests
         Assert.True(Leap.IsLeapYear(1960));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Year_divisible_by_100_not_divisible_by_400_in_common_year()
     {
         Assert.False(Leap.IsLeapYear(2100));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Year_divisible_by_100_but_not_by_3_is_still_not_a_leap_year()
     {
         Assert.False(Leap.IsLeapYear(1900));
